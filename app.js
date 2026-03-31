@@ -16,7 +16,7 @@ function login() {
 }
 
 function logout() {
-  document.getElementById("loginBox").style.display = "flex";
+  document.getElementById("loginBox").style.display = "block";
   document.getElementById("adminPanel").style.display = "none";
   document.getElementById("passwordInput").value = "";
   document.getElementById("loginError").style.display = "none";
