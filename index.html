@@ -10,73 +10,74 @@
 </head>
 
 <body>
-
-    <div class="login-box" id="loginBox">
-        <div class="logo">
-            <img src="./bG9nbzE3MzYyNTQwNzg=.svg" alt="">
-        </div>
-        <div class="login-title">لوحة تحكم المشرف</div>
-        <input type="password" id="passwordInput" placeholder="كلمة المرور" onkeydown="if(event.key==='Enter') login()">
-        <button class="login-btn" onclick="login()">دخول</button>
-        <div class="login-error" id="loginError">كلمة المرور غير صحيحة</div>
-    </div>
-
-    <div class="admin-panel" id="adminPanel">
-        <div class="admin-header">
-            <div class="admin-logo">
-                <img src="./bG9nbzE3MzYyNTQwNzg=.svg" alt="" width="150">
-                <small> — لوحة التحكم</small>
+    <div class="wrapper">
+        <div class="login-box" id="loginBox">
+            <div class="logo">
+                <img src="./bG9nbzE3MzYyNTQwNzg=.svg" alt="">
             </div>
-            <button class="logout-btn" onclick="logout()">خروج</button>
+            <div class="login-title">لوحة تحكم المشرف</div>
+            <input type="password" id="passwordInput" placeholder="كلمة المرور"
+                onkeydown="if(event.key==='Enter') login()">
+            <button class="login-btn" onclick="login()">دخول</button>
+            <div class="login-error" id="loginError">كلمة المرور غير صحيحة</div>
         </div>
 
-        <div class="card">
-            <div class="card-title">الوقت الحالي</div>
-            <div class="clock-display">
-                <div class="clock-time" id="clockTime">00:00:00</div>
-                <div class="clock-date" id="clockDate"></div>
-                <div class="clock-zone">توقيت القدس · GMT+3</div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <div class="admin-logo">
+                    <img src="./bG9nbzE3MzYyNTQwNzg=.svg" alt="" width="150">
+                    <small> — لوحة التحكم</small>
+                </div>
+                <button class="logout-btn" onclick="logout()">خروج</button>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-title">إجراءات النموذج</div>
-            <button class="open-btn" id="openBtn" onclick="openForm()">فتح التسجيل الآن</button>
-            <button class="close-btn" id="closeBtn" onclick="closeForm()">إغلاق التسجيل يدوياً</button>
-        </div>
+            <div class="card">
+                <div class="card-title">الوقت الحالي</div>
+                <div class="clock-display">
+                    <div class="clock-time" id="clockTime">00:00:00</div>
+                    <div class="clock-date" id="clockDate"></div>
+                    <div class="clock-zone">توقيت القدس · GMT+3</div>
+                </div>
+            </div>
 
-        <div class="card">
-            <div class="card-title">حالة النظام</div>
-            <div class="status-row">
-                <div class="status-dot green" id="statusDot"></div>
-                <div class="status-label">حالة النموذج</div>
-                <div class="status-value" id="statusValue">مفتوح</div>
+            <div class="card">
+                <div class="card-title">إجراءات النموذج</div>
+                <button class="open-btn" id="openBtn" onclick="openForm()">فتح التسجيل الآن</button>
+                <button class="close-btn" id="closeBtn" onclick="closeForm()">إغلاق التسجيل يدوياً</button>
             </div>
-            <div class="status-row">
-                <div class="status-dot green"></div>
-                <div class="status-label">موعد الفتح اليومي</div>
-                <div class="status-value">4:00 العصر يومياً</div>
-            </div>
-            <div class="status-row">
-                <div class="status-dot green"></div>
-                <div class="status-label">الحد اليومي</div>
-                <div class="status-value">50 مستفيد</div>
-            </div>
-        </div>
 
-        <div class="card">
-            <div class="card-title">سجل العمليات</div>
-            <div class="log-area" id="logArea">
-                <div class="log-item">
-                    <span class="log-time">--:--:--</span>
-                    <span class="log-msg">في انتظار العمليات...</span>
+            <div class="card">
+                <div class="card-title">حالة النظام</div>
+                <div class="status-row">
+                    <div class="status-dot green" id="statusDot"></div>
+                    <div class="status-label">حالة النموذج</div>
+                    <div class="status-value" id="statusValue">مفتوح</div>
+                </div>
+                <div class="status-row">
+                    <div class="status-dot green"></div>
+                    <div class="status-label">موعد الفتح اليومي</div>
+                    <div class="status-value">4:00 العصر يومياً</div>
+                </div>
+                <div class="status-row">
+                    <div class="status-dot green"></div>
+                    <div class="status-label">الحد اليومي</div>
+                    <div class="status-value">50 مستفيد</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">سجل العمليات</div>
+                <div class="log-area" id="logArea">
+                    <div class="log-item">
+                        <span class="log-time">--:--:--</span>
+                        <span class="log-msg">في انتظار العمليات...</span>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="toast" id="toast"></div>
     </div>
-
-    <div class="toast" id="toast"></div>
-
     <script src="app.js"></script>
 </body>
 
