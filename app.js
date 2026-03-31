@@ -6,7 +6,7 @@ const APPS_SCRIPT_URL =
 function login() {
   const val = document.getElementById("passwordInput").value;
   if (val === PASSWORD) {
-    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("loginBox").style.cssText = "display: none";
     document.getElementById("adminPanel").style.display = "block";
     startClock();
   } else {
@@ -16,8 +16,11 @@ function login() {
 }
 
 function logout() {
-  document.getElementById("loginBox").style.display = "block";
-  document.getElementById("adminPanel").style.display = "none";
+  const loginBox = document.getElementById("loginBox");
+  const adminPanel = document.getElementById("adminPanel");
+  
+  adminPanel.style.display = "none";
+  loginBox.style.cssText = "";  // ← يمسح كل الـ inline styles ويرجع للـ CSS الأصلي
   document.getElementById("passwordInput").value = "";
   document.getElementById("loginError").style.display = "none";
 }
